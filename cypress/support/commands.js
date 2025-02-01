@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('upScreenView', ()=>{
+    cy.viewport(1920, 1080)
+}),
+
+Cypress.Commands.add('visitSauceDemo', ()=>{
+    cy.visit('https://www.saucedemo.com/')
+})
